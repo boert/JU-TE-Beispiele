@@ -27,3 +27,5 @@ Copyright (C) 1999-2000 ZiLOG, Inc. All Rights Reserved
 0 Errors
 0 Warnings
 ```
+
+![Ausgabe des Beispielprogramms](https://raw.githubusercontent.com/boert/JU-TE-Beispiele/master/main.png)
