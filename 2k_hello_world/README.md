@@ -28,4 +28,4 @@ Copyright (C) 1999-2000 ZiLOG, Inc. All Rights Reserved
 0 Warnings
 ```
 
-![Ausgabe des Beispielprogramms](https://raw.githubusercontent.com/boert/JU-TE-Beispiele/master/main.png)
+![Ausgabe des Beispielprogramms](https://raw.githubusercontent.com/boert/JU-TE-Beispiele/master/2k_hello_world/main.png)
