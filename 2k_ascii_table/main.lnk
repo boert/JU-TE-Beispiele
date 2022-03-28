@@ -1,0 +1,24 @@
+-format = INTEL
+
+"main" = "startup","C:\Z8\rtl\crtls.lib","C:\Z8\rtl\fpdumys.obj","main.obj"
+ORDER FAR_DATA,TEXT
+CHANGE TEXT = FAR_DATA
+RANGE ROM $e000 : $e3ff
+RANGE XDATA $fd80 : $fdff
+RANGE RDATA $20 : $4f
+COPY NEAR_DATA ROM
+COPY FAR_DATA ROM
+define _low_near_romdata = copy base of NEAR_DATA
+define _low_neardata = base of NEAR_DATA
+define _len_neardata = length of NEAR_DATA
+define _low_far_romdata = copy base of FAR_DATA
+define _low_fardata = base of FAR_DATA
+define _len_fardata = length of FAR_DATA
+define _low_nearbss = base of NEAR_BSS
+define _len_nearbss = length of NEAR_BSS
+define _low_farbss = base of FAR_BSS
+define _len_farbss = length of FAR_BSS
+define _far_heaptop = top of XDATA
+define _far_stack = highaddr of XDATA
+define _near_stack = highaddr of RDATA
+define _far_heapbot = base of XDATA + length of FAR_BSS + length of FAR_DATA
