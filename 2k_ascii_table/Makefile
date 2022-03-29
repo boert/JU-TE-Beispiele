@@ -29,7 +29,7 @@ dump: main.ihx
 
 clean:
 	rm -f main.ihx
-	rm -f main.bin
+	#rm -f main.bin
 	rm -f *.lst
 	rm -f *.obj
 	rm -f main.map

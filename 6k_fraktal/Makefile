@@ -5,8 +5,7 @@ LINK=$(PREFIX)z8link.exe
 ASM=$(PREFIX)z8asm.exe
 
 
-all: main.bin
-	mv main.bin fraktal.bin
+all: fraktal.bin
 
 main.obj: main.c Makefile
 	@#$(CC)  -hexfile:"main" -of:"INTEL" -startup:"startup" -model=L  -keeplst  -nofplib  -keepasm  -nobss  -ROM:0xE000-0xE7ff  -XRAM:0xF800-0xFFFF -link -keeplnk  "main.c"
@@ -21,7 +20,10 @@ startup.obj: startup.asm
 
 
 main.bin: main.ihx
-	srec_cat main.ihx -intel -o main.bin -bin 
+	srec_cat main.ihx -intel -offset -0xE000 -o main.bin -binary 
+
+fraktal.bin: main.bin
+	mv main.bin fraktal.bin
 
 
 dump: main.ihx
